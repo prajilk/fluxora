@@ -6,35 +6,35 @@ import { ThemeProvider } from "@/components/theme-provider";
 const cabinetGrotesk = localFont({
     src: [
         {
-            path: "./fonts/CabinetGrotesk/CabinetGrotesk-Regular.ttf",
+            path: "fonts/CabinetGrotesk/CabinetGrotesk-Regular.ttf",
             weight: "400",
         },
         {
-            path: "./fonts/CabinetGrotesk/CabinetGrotesk-Medium.ttf",
+            path: "fonts/CabinetGrotesk/CabinetGrotesk-Medium.ttf",
             weight: "500",
         },
         {
-            path: "./fonts/CabinetGrotesk/CabinetGrotesk-Bold.ttf",
+            path: "fonts/CabinetGrotesk/CabinetGrotesk-Bold.ttf",
             weight: "700",
         },
         {
-            path: "./fonts/CabinetGrotesk/CabinetGrotesk-ExtraBold.ttf",
+            path: "fonts/CabinetGrotesk/CabinetGrotesk-ExtraBold.ttf",
             weight: "800",
         },
         {
-            path: "./fonts/CabinetGrotesk/CabinetGrotesk-Black.ttf",
+            path: "fonts/CabinetGrotesk/CabinetGrotesk-Black.ttf",
             weight: "900",
         },
         {
-            path: "./fonts/CabinetGrotesk/CabinetGrotesk-ExtraLight.ttf",
+            path: "fonts/CabinetGrotesk/CabinetGrotesk-ExtraLight.ttf",
             weight: "300",
         },
         {
-            path: "./fonts/CabinetGrotesk/CabinetGrotesk-Light.ttf",
+            path: "fonts/CabinetGrotesk/CabinetGrotesk-Light.ttf",
             weight: "200",
         },
         {
-            path: "./fonts/CabinetGrotesk/CabinetGrotesk-Thin.ttf",
+            path: "fonts/CabinetGrotesk/CabinetGrotesk-Thin.ttf",
             weight: "100",
         },
     ],
