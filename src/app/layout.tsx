@@ -44,7 +44,7 @@ const cabinetGrotesk = localFont({
 const n27 = localFont({
     src: [
         {
-            path: "../../public/fonts/n27/n27-regular-webfont.ttf",
+            path: "../../public/fonts/n-two-seven/n-two-seven-regular-webfont.ttf",
             weight: "400",
         },
     ],
