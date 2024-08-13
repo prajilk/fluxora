@@ -6,35 +6,35 @@ import { ThemeProvider } from "@/components/theme-provider";
 const cabinetGrotesk = localFont({
     src: [
         {
-            path: "./fonts/cabinet-grotesk/cabinet-grotesk-regular.ttf",
+            path: "../../public/fonts/cabinet-grotesk/cabinet-grotesk-regular.ttf",
             weight: "400",
         },
         {
-            path: "./fonts/cabinet-grotesk/cabinet-grotesk-medium.ttf",
+            path: "../../public/fonts/cabinet-grotesk/cabinet-grotesk-medium.ttf",
             weight: "500",
         },
         {
-            path: "./fonts/cabinet-grotesk/cabinet-grotesk-bold.ttf",
+            path: "../../public/fonts/cabinet-grotesk/cabinet-grotesk-bold.ttf",
             weight: "700",
         },
         {
-            path: "./fonts/cabinet-grotesk/cabinet-grotesk-extrabold.ttf",
+            path: "../../public/fonts/cabinet-grotesk/cabinet-grotesk-extrabold.ttf",
             weight: "800",
         },
         {
-            path: "./fonts/cabinet-grotesk/cabinet-grotesk-black.ttf",
+            path: "../../public/fonts/cabinet-grotesk/cabinet-grotesk-black.ttf",
             weight: "900",
         },
         {
-            path: "./fonts/cabinet-grotesk/cabinet-grotesk-extralight.ttf",
+            path: "../../public/fonts/cabinet-grotesk/cabinet-grotesk-extralight.ttf",
             weight: "300",
         },
         {
-            path: "./fonts/cabinet-grotesk/cabinet-grotesk-light.ttf",
+            path: "../../public/fonts/cabinet-grotesk/cabinet-grotesk-light.ttf",
             weight: "200",
         },
         {
-            path: "./fonts/cabinet-grotesk/cabinet-grotesk-thin.ttf",
+            path: "../../public/fonts/cabinet-grotesk/cabinet-grotesk-thin.ttf",
             weight: "100",
         },
     ],
@@ -44,7 +44,7 @@ const cabinetGrotesk = localFont({
 const n27 = localFont({
     src: [
         {
-            path: "./fonts/n27/n27-regular-webfont.ttf",
+            path: "../../public/fonts/n27/n27-regular-webfont.ttf",
             weight: "400",
         },
     ],
