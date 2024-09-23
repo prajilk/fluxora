@@ -8,7 +8,6 @@ import Navbar from "@/components/navbar/navbar";
 import Offer from "@/components/offer/offer";
 import Team from "@/components/team/team";
 import Work from "@/components/work/work";
-import SmoothScroll from "@/components/smooth-scroll";
 
 export default function Home() {
     return (
