@@ -9,26 +9,26 @@ import Facebook from "./icons/socials/facebook";
 const Footer = () => {
     return (
         <footer className="bg-secondary dark:bg-primary py-12 mt-auto">
-            <div className="container flex justify-between items-center">
+            <div className="container flex justify-between items-center gap-3">
                 <div>
                     <Logo
-                        className="fill-light dark:fill-light size-96"
+                        className="fill-light dark:fill-light"
                         dotStyle="fill-light"
                     />
                     <div className="mt-5 flex flex-col">
                         <Link
                             href={"mailto:contact@fluxora.fr"}
-                            className="text-xl font-light font-n27"
+                            className="text-lg md:text-xl font-light font-n27"
                         >
                             contact@fluxora.fr
                         </Link>
-                        <span className="font-inter uppercase text-lg font-light">
+                        <span className="font-inter uppercase text-sm md:text-lg font-light">
                             2024 fluxora, Tous droits Réservés
                         </span>
                     </div>
                 </div>
                 <div className="flex flex-col me-5">
-                    <span className="font-n27 font-extrabold text-xl uppercase leading-none">
+                    <span className="font-n27 font-extrabold text-lg md:text-xl uppercase leading-none">
                         Retrouvez <br /> nous sur :
                     </span>
                     <ul className="flex gap-2 mt-3 mb-5">
