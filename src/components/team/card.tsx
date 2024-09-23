@@ -8,7 +8,7 @@ type CardProps = {
 
 const Card = ({ imgSrc, name, role }: CardProps) => {
     return (
-        <div className="w-28 md:w-40 font-n27 uppercase">
+        <div className="w-36 md:w-40 font-n27 uppercase">
             <div className="bg-[#1C1720] w-full aspect-[1/1.2]">
                 <div className="relative w-full h-full">
                     <Image src={imgSrc} alt={name} fill />
