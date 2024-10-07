@@ -3,6 +3,7 @@
 import useIntersectionObserver from "@/hooks/use-intersection-observer";
 import LogoFull from "../icons/logo-full";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const works = ["project1.png", "project2.png", "project3.png"];
 
@@ -11,6 +12,9 @@ const Work = () => {
         once: true,
         threshold: 0.6,
     });
+
+    const t = useTranslations("Work");
+
     return (
         <div className="container py-28 flex justify-between px-0">
             <div className="grid place-content-center w-full relative overflow-hidden group">
@@ -23,8 +27,8 @@ const Work = () => {
                 >
                     <LogoFull />
                 </motion.div>
-                <span className="uppercase absolute top-1/2 left-1/2 -translate-x-1/2 text-5xl font-n27">
-                    Réalisations
+                <span className="text-white uppercase absolute top-1/2 left-1/2 -translate-x-1/2 text-5xl font-n27">
+                    {t("title")}
                 </span>
                 <div className="absolute space-y-7 w-full h-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 overflow-y-scroll no-scrollbar">
                     {works.map((work, i) => (

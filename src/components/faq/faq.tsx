@@ -7,16 +7,17 @@ import useWindowDimensions from "@/hooks/window-dimensions";
 import Plus from "../icons/plus";
 import { useState } from "react";
 import ArrowDown from "../icons/arrow-down";
-
-const faq = [
-    "Quels services propose Fluxora ?",
-    "Fluxora peut-elle aider à améliorer le classement de mon site sur les moteurs de recherche ?",
-    "Fluxora offre-t-elle un support et une maintenance continue après le lancement du site web ?",
-    "Combien de temps faut-il pour développer un site web personnalisé avec Fluxora ?",
-    "Qu'est-ce qui distingue Fluxora des autres agences de design web ?",
-];
+import { useTranslations } from "next-intl";
 
 const Faq = () => {
+    const t = useTranslations("FAQ");
+    const faq = [
+        t("question1"),
+        t("question2"),
+        t("question3"),
+        t("question4"),
+        t("question5"),
+    ];
     const [ref, isVisible] = useIntersectionObserver({
         once: true,
         threshold: 0.5,
@@ -32,7 +33,7 @@ const Faq = () => {
                     initial={{ x: -150, opacity: 0 }}
                     animate={isVisible ? { x: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.3 }}
-                    className="text-[45px] leading-none mb-10 md:text-center lg:text-left lg:mb-0 text-5xl uppercase font-n27 my-auto"
+                    className="text-[45px] text-white leading-none mb-10 md:text-center lg:text-left lg:my-auto text-5xl uppercase font-n27"
                 >
                     FAQ
                 </motion.h2>
@@ -40,7 +41,7 @@ const Faq = () => {
                     initial={{ x: 100, opacity: 0 }}
                     animate={isVisible ? { x: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.3 }}
-                    className="md:col-span-2 lg:me-5 space-y-5 mb-5 lg:mb-0"
+                    className="md:col-span-2 lg:me-5 space-y-5 mb-5 lg:mb-0 text-white"
                 >
                     {faq.slice(...sliceValue[0]).map((question, i) => (
                         <FaqCard question={question} index={i} key={i} />
@@ -50,7 +51,7 @@ const Faq = () => {
                     initial={{ x: 100, opacity: 0 }}
                     animate={isVisible ? { x: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.3 }}
-                    className="lg:col-span-2 space-y-5"
+                    className="lg:col-span-2 space-y-5 text-white"
                 >
                     {faq.slice(...sliceValue[1]).map((question, i) => (
                         <FaqCard question={question} index={i} key={i} />

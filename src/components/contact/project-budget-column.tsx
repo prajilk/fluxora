@@ -2,13 +2,16 @@
 
 import { ArrowRight } from "lucide-react";
 import { Button } from "../ui/button";
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const projects = ["Development", "Maintenance", "Branding", "UI/UX design"];
 const budgets = ["-5K€", "5K-10K€", "10K-15K€", "+20K€"];
 
 const ProjectBudgetColumn = ({ isVisible }: { isVisible: boolean }) => {
+    const [budgetActive, setBudgetActive] = useState(-1);
+    const t = useTranslations("Contact");
     return (
         <div className="overflow-hidden">
             <motion.div
@@ -29,12 +32,19 @@ const ProjectBudgetColumn = ({ isVisible }: { isVisible: boolean }) => {
                 </span>
                 <ul className="flex flex-wrap uppercase font-n27 font-medium">
                     {budgets.map((budget, i) => (
-                        <Chip key={i}>{budget}</Chip>
+                        <BudgetChip
+                            key={i}
+                            id={i}
+                            active={budgetActive}
+                            setActive={setBudgetActive}
+                        >
+                            {budget}
+                        </BudgetChip>
                     ))}
                 </ul>
                 <div className="flex mt-5">
                     <Button variant={"primaryOutline"} className="ms-auto">
-                        ENVOYER <ArrowRight />
+                        {t("send")} <ArrowRight />
                     </Button>
                 </div>
             </motion.div>
@@ -51,6 +61,29 @@ const Chip = ({ children }: { children: string }) => {
             onClick={() => setActive((prev) => !prev)}
             className={`${
                 active ? "bg-primary border-primary" : "border-white"
+            } py-2 px-4 border m-1 rounded-full cursor-pointer transition-all duration-500`}
+        >
+            {children}
+        </li>
+    );
+};
+
+const BudgetChip = ({
+    children,
+    active,
+    setActive,
+    id,
+}: {
+    children: string;
+    active: number;
+    setActive: Dispatch<SetStateAction<number>>;
+    id: number;
+}) => {
+    return (
+        <li
+            onClick={() => setActive(id)}
+            className={`${
+                active === id ? "bg-primary border-primary" : "border-white"
             } py-2 px-4 border m-1 rounded-full cursor-pointer transition-all duration-500`}
         >
             {children}

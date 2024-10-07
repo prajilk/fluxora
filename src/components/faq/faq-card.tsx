@@ -3,6 +3,7 @@
 import { useState } from "react";
 import ArrowDown from "../icons/arrow-down";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 type FaqCardProps = {
     question: string;
@@ -13,11 +14,15 @@ const FaqCard = ({ question, index }: FaqCardProps) => {
     const [open, setOpen] = useState<number | null>(null);
     const isItemOpen = index === open;
 
+    const t = useTranslations("FAQ");
+
     return (
         <div className="border border-white rounded-lg p-8 bg-[#262527] flex items-center">
             <div>
                 <div className="flex items-center justify-between gap-10">
-                    <h3 className="uppercase font-n27 text-lg">{question}</h3>
+                    <h3 className="uppercase font-n27 text-lg !leading-6">
+                        {question}
+                    </h3>
                     <button
                         onClick={() =>
                             setOpen((prev) => (prev === index ? null : index))
@@ -45,12 +50,9 @@ const FaqCard = ({ question, index }: FaqCardProps) => {
                         duration: 0.3,
                         ease: "linear",
                     }}
-                    className="mx-auto text-[#A8A5A5] max-w-sm overflow-hidden md:mx-0 md:max-w-full"
+                    className="mx-auto text-[#A8A5A5] max-w-sm overflow-hidden md:mx-0 md:max-w-full !leading-5"
                 >
-                    Fluxora se spécialise dans la création de sites web sur
-                    mesure, le développement de templates web, et offre des
-                    solutions digitales complètes incluant le SEO, le design
-                    UI/UX, et le développement e-commerce.
+                    {t("cardAnswer")}
                 </motion.div>
             </div>
         </div>

@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const InputColumn = ({ isVisible }: { isVisible: boolean }) => {
+    const t = useTranslations("Contact");
     return (
         <div>
             <div className="overflow-hidden">
@@ -10,12 +12,12 @@ const InputColumn = ({ isVisible }: { isVisible: boolean }) => {
                     transition={{ duration: 0.5 }}
                 >
                     <span className="text-primary font-n27 text-2xl font-medium">
-                        Nom & Entreprise :
+                        {t("inputColumn.field1")}
                     </span>
                     <input
                         type="text"
                         className="w-full md:w-11/12 bg-transparent p-2 border-b border-b-gray-400 outline-none font-n27"
-                        placeholder="John de FLUXORA"
+                        placeholder={t("inputColumn.placeholder1")}
                     />
                 </motion.div>
             </div>
@@ -26,12 +28,12 @@ const InputColumn = ({ isVisible }: { isVisible: boolean }) => {
                     transition={{ delay: 0.4, duration: 0.4 }}
                 >
                     <span className="text-primary mt-5 block font-n27 text-2xl font-medium">
-                        Votre mail :
+                        {t("inputColumn.field2")}
                     </span>
                     <input
                         type="email"
                         className="w-full md:w-11/12 bg-transparent p-2 border-b border-b-gray-400 outline-none font-n27"
-                        placeholder="John@mail.com"
+                        placeholder={t("inputColumn.placeholder2")}
                     />
                 </motion.div>
             </div>

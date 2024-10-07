@@ -1,21 +1,29 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useTransition } from "react";
 import { motion } from "framer-motion";
 import Logo from "../icons/logo";
 import Menu from "../icons/menu";
 import Close from "../icons/close";
 import NavItem from "./nav-item";
-
-const navItems = [
-    { title: "ACCUEIL", url: "/" },
-    { title: "À PROPOS", url: "/about" },
-    { title: "CONTACT", url: "/contact" },
-    { title: "Nos offres", url: "/" },
-];
+import { useLocale, useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
+import LocaleSwitcher from "./locale-switcher";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
+    const router = useRouter();
+    const [isPending, startTransition] = useTransition();
+
+    const t = useTranslations("NavItems");
+    const locale = useLocale();
+
+    const navItems = [
+        { title: t("welcome"), id: "home" },
+        { title: t("about"), id: "about" },
+        { title: t("contact"), id: "contact" },
+        { title: t("offers"), id: "offer" },
+    ];
 
     useEffect(() => {
         if (open) {
@@ -32,18 +40,31 @@ const Navbar = () => {
         };
     }, [open]);
 
+    function onSelectChange(value: string) {
+        startTransition(() => {
+            router.replace(value);
+        });
+    }
+
     return (
-        <nav className="py-5 fixed w-full dark:bg-dark bg-white shadow z-40">
+        <nav className="py-5 fixed w-full bg-dark shadow z-40">
             <div className="container flex justify-between items-center">
                 <div className="relative z-50">
                     <Logo />
                 </div>
-                <button
-                    onClick={() => setOpen((prev) => !prev)}
-                    className="relative z-50"
-                >
-                    {open ? <Close /> : <Menu />}
-                </button>
+                <div className="flex gap-5 items-center">
+                    <LocaleSwitcher
+                        defaultLocale={locale}
+                        disabled={isPending}
+                        onSelectChange={onSelectChange}
+                    />
+                    <button
+                        onClick={() => setOpen((prev) => !prev)}
+                        className="relative z-50"
+                    >
+                        {open ? <Close /> : <Menu />}
+                    </button>
+                </div>
             </div>
 
             <motion.div
@@ -70,7 +91,7 @@ const Navbar = () => {
                     />
                     <ul className="my-auto md:ms-[15%] lg:ms-[20%] lg:mt-[8%] font-n27 relative z-50 uppercase space-y-4 lg:space-y-2">
                         {navItems.map((item, i) => (
-                            <NavItem title={item.title} key={i} />
+                            <NavItem setOpen={setOpen} {...item} key={i} />
                         ))}
                     </ul>
                 </div>

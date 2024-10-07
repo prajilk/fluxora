@@ -3,30 +3,35 @@
 import useIntersectionObserver from "@/hooks/use-intersection-observer";
 import LogoWhite from "../icons/logo-white";
 import Slider from "./slider";
+import { useTranslations } from "next-intl";
 
 const About = () => {
     const [ref, isVisible] = useIntersectionObserver({
         once: true,
         threshold: 0.6,
     });
+
+    const t = useTranslations("About");
+
     return (
-        <div className="container py-20 flex justify-between flex-col md:flex-row">
+        <div
+            id="about"
+            className="container py-20 flex justify-between flex-col md:flex-row"
+        >
             <div className="my-auto">
                 <h2 className="text-white uppercase text-4xl lg:text-5xl font-medium md:font-bold font-n27">
-                    qui <br /> sommes <br /> nous?
+                    {t.rich("title", {
+                        br: () => <br />,
+                    })}
                 </h2>
-                <p className="font-inter text-lg lg:text-xl font-extralight max-w-md mt-7">
-                    Fluxora est une agence Web qui se spécialise dans la
-                    création de sites web sur mesure et de templates de sites
-                    web
+                <p className="text-white font-inter text-lg lg:text-xl font-extralight max-w-md mt-7 !leading-6">
+                    {t("description")}
                 </p>
-                <h2 className="text-2xl md:text-3xl lg:text-4xl text-primary font-bold mt-5 mb-1">
-                    Notre mission :
+                <h2 className="text-2xl uppercase md:text-3xl text-primary font-bold mt-5 mb-1 font-n27">
+                    {t("subTitle")}
                 </h2>
-                <p className="font-inter text-lg lg:text-xl font-extralight max-w-md">
-                    Fournir des solutions MODERNES et de haute qualité qui
-                    durent dans le temps. Renforcer votre présence en ligne et
-                    rendez vos offres claires pour vos clients.
+                <p className="text-white font-inter text-lg lg:text-xl font-extralight max-w-md !leading-6">
+                    {t("subDescription")}
                 </p>
             </div>
             <div

@@ -4,6 +4,7 @@ import useIntersectionObserver from "@/hooks/use-intersection-observer";
 import Card from "./card";
 import { motion } from "framer-motion";
 import useWindowDimensions from "@/hooks/window-dimensions";
+import { useTranslations } from "next-intl";
 
 const teamMembers = [
     {
@@ -40,6 +41,9 @@ const Team = () => {
     });
 
     const { width } = useWindowDimensions();
+
+    const t = useTranslations("Team");
+
     return (
         <div className="container py-28 flex justify-between">
             <motion.div
@@ -49,8 +53,10 @@ const Team = () => {
                 animate={isVisible ? { opacity: 1 } : {}} // Animate when in view
                 transition={{ duration: 0.8 }}
             >
-                <h2 className="text-4xl font-medium lg:text-5xl uppercase font-n27 my-auto">
-                    Notre <br /> Équipe
+                <h2 className="text-white text-4xl font-medium lg:text-5xl uppercase font-n27 my-auto">
+                    {t.rich("title", {
+                        br: () => <br />,
+                    })}
                 </h2>
                 <div className="md:col-span-2 space-y-5 mt-10 md:mt-0">
                     <div className="flex justify-center flex-wrap gap-5">

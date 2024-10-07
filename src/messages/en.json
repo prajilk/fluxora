@@ -1,0 +1,149 @@
+{
+    "NavItems": {
+        "welcome": "welcome",
+        "about": "about",
+        "contact": "contact",
+        "offers": "our offers"
+    },
+    "Hero": {
+        "title1": "Simplicity <span>and</span> efficiency",
+        "title2": "for sites and apps",
+        "description": "We create tailor-made web and app solutions that perfectly meet your specific needs",
+        "button": "Discover our offers"
+    },
+    "About": {
+        "title": "Who <br></br> we <br></br> are",
+        "description": "Fluxora is a web agency that specializes in creating custom websites and website templates",
+        "subTitle": "Our mission :",
+        "subDescription": "Provide MODERN and high quality solutions that last over time. Strengthen your online presence and make your offers clear to your customers."
+    },
+    "Work": {
+        "title": "Achievements"
+    },
+    "Team": {
+        "title": "our <br></br> team"
+    },
+    "Offer": {
+        "title": "our <br></br> packs",
+        "cardSubTitle": "Features",
+        "card1": {
+            "title": "ESSENTIAL",
+            "list1": {
+                "title": "High-End Custom Design:",
+                "list1": "Modern and intuitive highly personalized landing page"
+            },
+            "list2": {
+                "title": "Landing page"
+            },
+            "list3": {
+                "title": "Sections",
+                "list1": "Welcome",
+                "list2": "Presentation of services",
+                "list3": "Advanced Online Booking Page",
+                "list4": "Contact page with form",
+                "list5": "Customer Testimonials Page"
+            },
+            "list4": {
+                "title": "Advanced Features:",
+                "list1": "Advanced booking system with secure online payment.",
+                "list2": "Google Maps integration and real-time navigation options.",
+                "list3": "Advanced SEO optimization for better ranking on search engines.",
+                "list4": "Responsive design optimized for a perfect user experience on all devices.",
+                "list5": "Social media integration for better customer interaction."
+            },
+            "list5": {
+                "title": "Support and Maintenance:",
+                "list1": "Email and phone support for 3 months after site delivery."
+            }
+        },
+        "card2": {
+            "title": "CUSTOM MADE",
+            "list1": {
+                "title": "ESSENTIAL"
+            },
+            "list2": {
+                "title": "Features:"
+            },
+            "list3": {
+                "title": "High-End Custom Design:",
+                "list1": "Modern and intuitive highly personalized landing page"
+            },
+            "list4": {
+                "title": "Landing page"
+            },
+            "list5": {
+                "title": "Sections",
+                "list1": "Welcome",
+                "list2": "Presentation of services",
+                "list3": "Advanced Online Booking Page",
+                "list4": "Contact page with form",
+                "list5": "Customer Testimonials Page"
+            },
+            "list6": {
+                "title": "Advanced Features:",
+                "list1": "Advanced booking system with secure online payment.",
+                "list2": "Google Maps integration and real-time navigation options.",
+                "list3": "Advanced SEO optimization for better ranking on search engines.",
+                "list4": "Responsive design optimized for a perfect user experience on all devices.",
+                "list5": "Social media integration for better customer interaction."
+            },
+            "list7": {
+                "title": "Support and Maintenance:",
+                "list1": "Email and phone support for 3 months after site delivery."
+            },
+            "list8": {
+                "title": "Price",
+                "list1": "1599 € excluding VAT"
+            },
+            "list9": {
+                "title": "Options 1",
+                "list1": "Add Logo"
+            },
+            "list10": {
+                "title": "Options 2",
+                "list1": "Adding Visual Identity + Logo"
+            },
+            "list11": {
+                "title": "Options 3",
+                "list1": "Added Visual Identity + Logo + 30 posts"
+            },
+            "list12": {
+                "title": "Premium offer:",
+                "list1": "Personalized support for the realization of the client's project tailored to their needs.",
+                "list2": "1 to 8 pages depending on the request or Landing page",
+                "list3": "SEO optimization",
+                "list4": "Responsive Web site",
+                "list5": "Visual identity (Branding)",
+                "list6": "Logo",
+                "list7": "Social Media Post",
+                "list8": "Site maintenance for 6 months"
+            },
+            "list13": {
+                "title": "Option: Extension of site maintenance"
+            }
+        }
+    },
+    "FAQ": {
+        "cardAnswer": "Fluxora specializes in custom website creation, web template development, and offers complete digital solutions including SEO, UI/UX design, and e-commerce development.",
+        "question1": "What services does Fluxora offer?",
+        "question2": "Can Fluxora help improve my site's search engine ranking?",
+        "question3": "Does Fluxora offer ongoing support and maintenance after the website launch?",
+        "question4": "How long does it take to develop a custom website with Fluxora?",
+        "question5": "What sets Fluxora apart from other web design agencies?"
+    },
+    "Contact": {
+        "title": "Let's work together",
+        "inputColumn": {
+            "field1": "Name & Company:",
+            "placeholder1": "John from FLUXORA",
+            "field2": "Your email:",
+            "placeholder2": "John@mail.com"
+        },
+        "send": "send"
+    },
+    "Footer": {
+        "copyright": "All rights reserved",
+        "findUs": "Find <br></br> us on:",
+        "legal": "Legal notices"
+    }
+}

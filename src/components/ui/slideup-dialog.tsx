@@ -65,11 +65,11 @@ const SlideUpDialog = ({
                             >
                                 <button
                                     onClick={() => setOpen(false)}
-                                    className="bg-black rounded-full p-2 absolute right-0 top-0 m-2"
+                                    className="bg-black rounded-full p-2 absolute right-0 top-0 m-2 text-white"
                                 >
                                     <X />
                                 </button>
-                                <h1 className="text-xl lg:text-2xl font-medium">
+                                <h1 className="text-white text-xl lg:text-2xl font-medium">
                                     {title}
                                 </h1>
                                 {children}

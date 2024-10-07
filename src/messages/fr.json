@@ -1,0 +1,149 @@
+{
+    "NavItems": {
+        "welcome": "ACCUEIL",
+        "about": "À PROPOS",
+        "contact": "contact",
+        "offers": "Nos offres"
+    },
+    "Hero": {
+        "title1": "Simplicité <span>et</span> efficacité",
+        "title2": "pour sites et apps",
+        "description": "Nous créons des solutions web et apps sur mesure qui répondent parfaitement à vos besoins spécifiques",
+        "button": "Découvrez nos offres"
+    },
+    "About": {
+        "title": "qui <br></br> sommes <br></br> nous?",
+        "description": "Fluxora est une agence Web qui se spécialise dans la création de sites web sur mesure et de templates de sites web",
+        "subTitle": "Notre mission :",
+        "subDescription": "Fournir des solutions MODERNES et de haute qualité qui durent dans le temps. Renforcer votre présence en ligne et rendez vos offres claires pour vos clients."
+    },
+    "Work": {
+        "title": "Réalisations"
+    },
+    "Team": {
+        "title": "Notre <br></br> Équipe"
+    },
+    "Offer": {
+        "title": "Nos <br></br> Packs",
+        "cardSubTitle": "Caractéristiques",
+        "card1": {
+            "title": "ESSENTIAL",
+            "list1": {
+                "title": "Design Personnalisé Haut de Gamme :",
+                "list1": "Landing Page hautement personnalisée moderne et intuitive"
+            },
+            "list2": {
+                "title": "Landing page"
+            },
+            "list3": {
+                "title": "Sections",
+                "list1": "Accueil",
+                "list2": "Présentation des services",
+                "list3": "Page de réservation en ligne avancée",
+                "list4": "Page de contact avec formulaire",
+                "list5": "Page de témoignages clients"
+            },
+            "list4": {
+                "title": "Fonctionnalités Avancées :",
+                "list1": "Système de réservation avancé avec paiement en ligne sécurisé.",
+                "list2": "Intégration de Google Maps et options de navigation en temps réel.",
+                "list3": "Optimisation SEO avancée pour un meilleur classement sur les moteurs de recherche.",
+                "list4": "Responsive design optimisé pour une expérience utilisateur parfaite sur tous les appareils.",
+                "list5": "Intégration des réseaux sociaux pour une meilleure interaction avec les clients."
+            },
+            "list5": {
+                "title": "Support et Maintenance :",
+                "list1": "Support par email et téléphone pendant 3 mois après la livraison du site."
+            }
+        },
+        "card2": {
+            "title": "SUR MESURE",
+            "list1": {
+                "title": "ESSENTIAL"
+            },
+            "list2": {
+                "title": "Caractéristiques :"
+            },
+            "list3": {
+                "title": "Design Personnalisé Haut de Gamme :",
+                "list1": "Landing Page hautement personnalisée moderne et intuitive"
+            },
+            "list4": {
+                "title": "Landing Page"
+            },
+            "list5": {
+                "title": "Sections :",
+                "list1": "Accueil",
+                "list2": "Présentation des services",
+                "list3": "Page de réservation en ligne avancée",
+                "list4": "Page de contact avec formulaire",
+                "list5": "Page de témoignages clients"
+            },
+            "list6": {
+                "title": "Fonctionnalités Avancées :",
+                "list1": "Système de réservation avancé avec paiement en ligne sécurisé.",
+                "list2": "Intégration de Google Maps et options de navigation en temps réel.",
+                "list3": "Optimisation SEO avancée pour un meilleur classement sur les moteurs de recherche.",
+                "list4": "Responsive design optimisé pour une expérience utilisateur parfaite sur tous les appareils.",
+                "list5": "Intégration des réseaux sociaux pour une meilleure interaction avec les clients."
+            },
+            "list7": {
+                "title": "Support et Maintenance :",
+                "list1": "Support par email et téléphone pendant 3 mois après la livraison du site."
+            },
+            "list8": {
+                "title": "Prix",
+                "list1": "1599 € HT"
+            },
+            "list9": {
+                "title": "Options 1",
+                "list1": "Ajout Logo"
+            },
+            "list10": {
+                "title": "Options 2",
+                "list1": "Ajout Identité visuelle + Logo"
+            },
+            "list11": {
+                "title": "Options 3",
+                "list1": "Ajout Identité visuelle + Logo + 30 post"
+            },
+            "list12": {
+                "title": "Offre premium :",
+                "list1": "Accompagnement personnalisé sur la réalisation du projet du client sur mesure en fonction de ses besoins.",
+                "list2": "1 à 8 pages en fonction de la demande ou Landing page",
+                "list3": "Optimisation SEO",
+                "list4": "Responsive Web site",
+                "list5": "Identité visuelle (Branding)",
+                "list6": "Logo",
+                "list7": "Post Réseaux sociaux",
+                "list8": "Maintenance du site pendant 6 mois"
+            },
+            "list13": {
+                "title": "Option : Prolongation maintenance du site"
+            }
+        }
+    },
+    "FAQ": {
+        "cardAnswer": "Fluxora se spécialise dans la création de sites web sur mesure, le développement de templates web, et offre des solutions digitales complètes incluant le SEO, le design UI/UX, et le développement e-commerce.",
+        "question1": "Quels services propose Fluxora ?",
+        "question2": "Fluxora peut-elle aider à améliorer le classement de mon site sur les moteurs de recherche ?",
+        "question3": "Fluxora offre-t-elle un support et une maintenance continue après le lancement du site web ?",
+        "question4": "Combien de temps faut-il pour développer un site web personnalisé avec Fluxora ?",
+        "question5": "Qu'est-ce qui distingue Fluxora des autres agences de design web ?"
+    },
+    "Contact": {
+        "title": "Travaillons Ensemble",
+        "inputColumn": {
+            "field1": "Name & Company:",
+            "placeholder1": "John from FLUXORA",
+            "field2": "Your email:",
+            "placeholder2": "John@mail.com"
+        },
+        "send": "envoyer"
+    },
+    "Footer": {
+        "copyright": "Tous droits Réservés",
+        "findUs": "Retrouvez <br></br> nous sur :",
+        "legal": "Mentions légales"
+    }
+}

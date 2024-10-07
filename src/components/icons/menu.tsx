@@ -1,25 +1,9 @@
 const Menu = () => {
     return (
-        <svg
-            width="51"
-            height="15"
-            viewBox="0 0 51 15"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-        >
-            <rect
-                width="50"
-                height="3"
-                transform="translate(0.266113 0.5)"
-                fill="#F6F6F6"
-            />
-            <rect
-                width="28"
-                height="3"
-                transform="translate(22.2661 11.5)"
-                fill="#F6F6F6"
-            />
-        </svg>
+        <div className="space-y-2 group">
+            <div className="w-[50px] h-[3px] bg-white group-hover:bg-primary"></div>
+            <div className="w-[28px] ms-auto h-[3px] bg-white group-hover:bg-primary group-hover:w-[50px] transition-all duration-200"></div>
+        </div>
     );
 };
 

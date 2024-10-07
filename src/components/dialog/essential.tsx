@@ -1,75 +1,63 @@
+import { useTranslations } from "next-intl";
 import SlideUpDialog from "../ui/slideup-dialog";
 
 const EssentialDialog = () => {
+    const t = useTranslations("Offer");
+
     return (
-        <SlideUpDialog title="Essential">
+        <SlideUpDialog title={t("card1.title")}>
             <div className="overflow-y-scroll size-full scrollbar-thin space-y-3">
-                <span className="bg-[#493BFF] px-3 py-2 text-base lg:text-lg font-medium">
-                    Caractéristiques
+                <span className="bg-[#493BFF] text-white px-3 py-2 text-base lg:text-lg font-medium">
+                    {t("cardSubTitle")}
                 </span>
-                <ul className="ps-5 space-y-1">
+                <ul className="ps-5 space-y-1 text-white">
                     <li className="list-decimal text-[#493BFF]">
-                        Design Personnalisé Haut de Gamme :
+                        {t("card1.list1.title")}
                     </li>
                     <ul>
                         <li className="list-disc text-sm font-inter capitalize">
-                            Landing Page hautement personnalisée moderne et
-                            intuitive
+                            {t("card1.list1.list1")}
                         </li>
                     </ul>
                     <li className="list-decimal text-[#493BFF]">
-                        Landing page
+                        {t("card1.list2.title")}
                     </li>
-                    <li className="list-decimal text-[#493BFF]">Sections</li>
-                    <ul className="space-y-1">
-                        <li className="list-disc text-sm font-inter capitalize">
-                            Accueil
-                        </li>
-                        <li className="list-disc text-sm font-inter capitalize">
-                            Présentation des services
-                        </li>
-                        <li className="list-disc text-sm font-inter capitalize">
-                            Page de réservation en ligne avancée
-                        </li>
-                        <li className="list-disc text-sm font-inter capitalize">
-                            Page de contact avec formulaire
-                        </li>
-                        <li className="list-disc text-sm font-inter capitalize">
-                            Page de témoignages clients
-                        </li>
-                    </ul>
                     <li className="list-decimal text-[#493BFF]">
-                        Fonctionnalités Avancées :
+                        {t("card1.list3.title")}
                     </li>
                     <ul className="space-y-1">
-                        <li className="list-disc text-sm font-inter capitalize">
-                            Système de réservation avancé avec paiement en ligne
-                            sécurisé.
-                        </li>
-                        <li className="list-disc text-sm font-inter capitalize">
-                            Intégration de Google Maps et options de navigation
-                            en temps réel.
-                        </li>
-                        <li className="list-disc text-sm font-inter capitalize">
-                            Optimisation SEO avancée pour un meilleur classement
-                            sur les moteurs de recherche.
-                        </li>
-                        <li className="list-disc text-sm font-inter capitalize">
-                            Responsive design optimisé pour une expérience
-                            utilisateur parfaite sur tous les appareils.
-                        </li>
-                        <li className="list-disc text-sm font-inter capitalize">
-                            Intégration des réseaux sociaux pour une meilleure
-                            interaction avec les clients.
-                        </li>
+                        {Array(5)
+                            .fill(null)
+                            .map((_, i) => (
+                                <li
+                                    className="list-disc text-sm font-inter capitalize"
+                                    key={i}
+                                >
+                                    {t(`card1.list3.list${i + 1}`)}
+                                </li>
+                            ))}
                     </ul>
                     <li className="list-decimal text-[#493BFF]">
-                        Support et Maintenance :
+                        {t("card1.list4.title")}
+                    </li>
+                    <ul className="space-y-1">
+                        {Array(5)
+                            .fill(null)
+                            .map((_, i) => (
+                                <li
+                                    className="list-disc text-sm font-inter capitalize"
+                                    key={i}
+                                >
+                                    {t(`card1.list4.list${i + 1}`)}
+                                </li>
+                            ))}
+                    </ul>
+                    <li className="list-decimal text-[#493BFF]">
+                        {t("card1.list5.title")}
                     </li>
                     <ul>
                         <li className="list-disc text-sm font-inter capitalize">
-                            Support par email et téléphone pendant 3 mois après
-                            la livraison du site.
+                            {t("card1.list5.list1")}
                         </li>
                     </ul>
                 </ul>

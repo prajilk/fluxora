@@ -13,9 +13,9 @@ const Card = ({ imgSrc, name, role }: CardProps) => {
                 <div className="relative w-full h-full">
                     <Image src={imgSrc} alt={name} fill />
                 </div>
-                <span className="text-center text-[10px] md:text-base text-wrap block leading-4 py-2">
-                    {role}
-                </span>
+                <div className="text-white text-center text-[10px] md:text-base text-wrap !leading-4 h-7 md:h-11 flex items-center justify-center">
+                    <span>{role}</span>
+                </div>
             </div>
             <span className="text-right text-sm md:text-base text-primary block mt-2">
                 {name}

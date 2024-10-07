@@ -5,10 +5,12 @@ import Instagram from "./icons/socials/instagram";
 import Behance from "./icons/socials/behance";
 import Dribbble from "./icons/socials/dribbble";
 import Facebook from "./icons/socials/facebook";
+import { useTranslations } from "next-intl";
 
 const Footer = () => {
+    const t = useTranslations("Footer");
     return (
-        <footer className="bg-secondary dark:bg-primary py-12 mt-auto">
+        <footer className="bg-primary py-12 mt-auto text-white">
             <div className="container flex justify-between items-center gap-3">
                 <div>
                     <Logo
@@ -23,13 +25,15 @@ const Footer = () => {
                             contact@fluxora.fr
                         </Link>
                         <span className="font-inter uppercase text-sm md:text-lg font-light">
-                            2024 fluxora, Tous droits Réservés
+                            2024 fluxora, {t("copyright")}
                         </span>
                     </div>
                 </div>
                 <div className="flex flex-col me-5">
                     <span className="font-n27 font-extrabold text-lg md:text-xl uppercase leading-none">
-                        Retrouvez <br /> nous sur :
+                        {t.rich("findUs", {
+                            br: () => <br />,
+                        })}
                     </span>
                     <ul className="flex gap-2 mt-3 mb-5">
                         <li className="cursor-pointer">
@@ -49,7 +53,7 @@ const Footer = () => {
                         </li>
                     </ul>
                     <span className="font-inter md:text-lg whitespace-nowrap">
-                        Mentions légales
+                        {t("legal")}
                     </span>
                 </div>
             </div>

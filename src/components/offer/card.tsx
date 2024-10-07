@@ -24,7 +24,7 @@ const Card = ({ bg, title, dialogComponent, isVisible, delay }: CardProps) => {
                 >
                     <LogoWhite key={1} className="fill-white size-20" />
                 </div>
-                <span className="text-center text-wrap block leading-4 py-3">
+                <span className="text-white text-center text-wrap block leading-4 py-3">
                     {title}
                 </span>
             </div>

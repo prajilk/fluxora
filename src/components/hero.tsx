@@ -3,6 +3,7 @@
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const Hero = () => {
     const MotionButton = motion(Button);
@@ -11,8 +12,11 @@ const Hero = () => {
         visible: { opacity: 1 },
     };
 
+    const t = useTranslations("Hero");
+
     return (
         <div
+            id="home"
             className="bg-no-repeat [background-position:50%_50%] bg-black min-h-[45rem] flex"
             style={{
                 backgroundImage: "url(/images/backgrounds/hero.png)",
@@ -33,13 +37,17 @@ const Hero = () => {
                             }}
                             className="flex justify-center mt-10 text-left items-center md:text-center flex-wrap"
                         >
-                            <h1 className="uppercase font-n27 dark:text-[#9747FF] font-semibold md:font-black text-[45px] leading-none md:text-5xl lg:text-6xl">
-                                Simplicité{" "}
-                                <span className="text-white">et</span>{" "}
-                                efficacité
+                            <h1 className="uppercase font-n27 text-[#9747FF] font-semibold md:font-black text-[45px] leading-none md:text-5xl lg:text-6xl">
+                                {t.rich("title1", {
+                                    span: (chunk: any) => (
+                                        <span className="text-white">
+                                            {chunk}
+                                        </span>
+                                    ),
+                                })}
                             </h1>
-                            <span className="ms-0 md:ms-4 uppercase font-n27 dark:text-white font-semibold md:font-black text-[45px] leading-none md:text-5xl lg:text-6xl">
-                                pour sites et apps
+                            <span className="ms-0 md:ms-4 uppercase font-n27 text-white font-semibold md:font-black text-[45px] leading-none md:text-5xl lg:text-6xl">
+                                {t("title2")}
                             </span>
                         </motion.div>
                     </div>
@@ -51,10 +59,9 @@ const Hero = () => {
                             delay: 0.6,
                             duration: 0.7,
                         }}
-                        className="font-inter dark:text-light text-secondary text-lg md:text-center lg:text-xl font-extralight"
+                        className="font-inter text-light text-lg md:text-center lg:text-xl font-extralight !leading-6"
                     >
-                        Nous créons des solutions web et apps sur mesure qui
-                        répondent parfaitement à vos besoins spécifiques
+                        {t("description")}
                     </motion.p>
                     <MotionButton
                         variants={fadeVariants}
@@ -65,9 +72,14 @@ const Hero = () => {
                             duration: 0.7,
                         }}
                         variant={"outline"}
-                        className="mt-5 w-fit md:w-auto px-7 md:px-5"
+                        className="mt-5 text-white text-lg w-fit md:w-auto px-7 md:px-5"
+                        onClick={() =>
+                            document
+                                .getElementById("offer")
+                                ?.scrollIntoView({ behavior: "smooth" })
+                        }
                     >
-                        Découvrez nos offres
+                        {t("button")}
                         <ArrowRight />
                     </MotionButton>
                 </div>
